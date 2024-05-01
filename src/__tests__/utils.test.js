@@ -1,5 +1,3 @@
-// Your tests here
-// src/__tests__/utils.test.js
 import { isPalindrome } from "../utils";
 
 describe("isPalindrome", () => {
@@ -19,15 +17,15 @@ describe("isPalindrome", () => {
     expect(isPalindrome("")).toBe(false);
   });
 
-  it("throws an error for non-alphabetic characters", () => {
-    expect(() => {
-      isPalindrome("12321");
-    }).toThrow();
-  });
-
   it("throws an error for input that isn't a string", () => {
     expect(() => {
       isPalindrome(12321);
+    }).toThrow();
+  });
+
+  it("throws an error for input with non-alphabetic characters", () => {
+    expect(() => {
+      isPalindrome("12321");
     }).toThrow();
   });
 });
